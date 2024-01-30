@@ -56,9 +56,9 @@ export class DeleteDirective{
         });
       },(errorResponse:HttpErrorResponse) => {
         this.spinner.hide(SpinnerType.BallAtom);
-        this.alertifyService.message("Product deleted",{
+        this.alertifyService.message("Product couldn't delete",{
            dismissOthers:true,
-           messageType:MessageType.Success,
+           messageType:MessageType.Error,
            position:Position.TopRight,
           });
       });
